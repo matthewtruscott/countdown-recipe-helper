@@ -1,13 +1,13 @@
-export type DispatchMessage = {
+export interface DispatchMessage {
     type: string;
 }
 
-export type DOMMessageResponse = {
+export interface DOMMessageResponse {
     title: string;
     headlines: string[];
 }
 
 
-export type FetchResponse = {
+export interface FetchResponse {
     res: object
 }

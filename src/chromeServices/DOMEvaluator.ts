@@ -1,5 +1,5 @@
 
-import { DispatchMessage, DOMMessageResponse, FetchResponse } from '../types';
+import { DispatchMessage } from '../types';
 
 
 const messagesFromReactAppListener = (request: DispatchMessage, sender: chrome.runtime.MessageSender, sendResponse: (response: any) => void) => {
@@ -22,9 +22,8 @@ function handle(request: any) {
             const response = await fetch('https://shop.countdown.co.nz/api/v1/trolleys/my/items', {
                 'method': 'POST',
                 'body': JSON.stringify({
-                    //             sku: '791925',
                     sku: request.prod_id,
-                    quantity: 8,
+                    quantity: request.quantity,
                 }),
                 headers: {
                     'Content-Type': 'application/json',
@@ -34,6 +33,21 @@ function handle(request: any) {
 
             const res = await response.json();
             console.log('[content.js POST_ADD_TROLLEY]. Message response', res);
+            resolve(res);
+        }
+
+        if (request.type === 'SEARCH_INGREDIENT') {
+            console.log('Starting : "SEARCH_INGREDIENT"')
+
+            const response = await fetch('https://shop.countdown.co.nz/api/v1/products?target=search&search=' + request.searchValue, {
+                'method': 'GET',
+                headers: {
+                    'X-Requested-With': 'OnlineShopping.WebApp',
+                },
+            })
+
+            const res = await response.json();
+            console.log('[content.js SEARCH_INGREDIENT]. Message response', res);
             resolve(res);
         }
     });

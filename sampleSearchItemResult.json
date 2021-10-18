@@ -1,0 +1,58 @@
+{
+    "type": "Product",
+    "name": "countdown butter salted",
+    "barcode": "9300633725082",
+    "variety": "salted",
+    "brand": "countdown",
+    "slug": "countdown-butter-salted",
+    "sku": "827847",
+    "unit": "Each",
+    "selectedPurchasingUnit": null,
+    "price": {
+        "originalPrice": 5.4,
+        "salePrice": 5.4,
+        "savePrice": 0,
+        "hasBonusPoints": false,
+        "isClubPrice": false,
+        "isSpecial": false,
+        "isNew": false,
+        "canShowOriginalPrice": true,
+        "discount": null,
+        "total": null,
+        "isTargetedOffer": false,
+        "averagePricePerSingleUnit": null,
+        "purchasingUnitPrice": null
+    },
+    "images": {
+        "small": "https://static.countdown.co.nz/assets/product-images/small/9300633725082.jpg",
+        "big": "https://static.countdown.co.nz/assets/product-images/big/9300633725082.jpg"
+    },
+    "quantity": {
+        "min": 1,
+        "max": 20,
+        "increment": 1,
+        "value": null,
+        "quantityInOrder": null,
+        "purchasingQuantityString": null
+    },
+    "eachUnitQuantity": null,
+    "averageWeightPerUnit": null,
+    "size": {
+        "cupPrice": 1.08,
+        "cupMeasure": "100g",
+        "packageType": null,
+        "volumeSize": "500g"
+    },
+    "hasShopperNotes": false,
+    "productTag": {
+        "tagType": "IsGreatPrice",
+        "multiBuy": null,
+        "bonusPoints": null,
+        "additionalTag": null,
+        "targetedOffer": null
+    },
+    "subsAllowed": false,
+    "supportsBothEachAndKgPricing": false,
+    "adId": null,
+    "priceUnitLabel": null
+}
